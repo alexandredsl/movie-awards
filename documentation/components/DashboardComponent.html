@@ -1,0 +1,807 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>movie-awards documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">movie-awards documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  DashboardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/dashboard/dashboard.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./dashboard.component.sass</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./dashboard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#$awardsInterval" >$awardsInterval</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#$movieWinnerByYear" >$movieWinnerByYear</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#$topThreeStudios" >$topThreeStudios</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#$yearsWithMostWinners" >$yearsWithMostWinners</a>
+                            </li>
+                            <li>
+                                <a href="#disabledDate" >disabledDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#movieService" >movieService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectedYear" >selectedYear</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#today" >today</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getFirstThreeItems" >getFirstThreeItems</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(movieService: <a href="../injectables/MoviesService.html" target="_self">MoviesService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>movieService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MoviesService.html" target="_self" >MoviesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFirstThreeItems"></a>
+                    <span class="name">
+                        <span ><b>getFirstThreeItems</b></span>
+                        <a href="#getFirstThreeItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFirstThreeItems(studios: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>studios</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="$awardsInterval"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>$awardsInterval</b></span>
+                        <a href="#$awardsInterval"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.movieService.getMaxMinWinIntervalForProducers()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="$movieWinnerByYear"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>$movieWinnerByYear</b></span>
+                        <a href="#$movieWinnerByYear"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/MovieWinnerByYear.html" target="_self" >Observable&lt;MovieWinnerByYear[]&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.movieService.getMovieWinnerByYear(0)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="$topThreeStudios"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>$topThreeStudios</b></span>
+                        <a href="#$topThreeStudios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.movieService.getStudiosWithWinCount().pipe(mergeMap(this.getFirstThreeItems))</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="$yearsWithMostWinners"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>$yearsWithMostWinners</b></span>
+                        <a href="#$yearsWithMostWinners"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.movieService.getYearWithMultipleWinners()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="disabledDate"></a>
+                    <span class="name">
+                        <span ><b>disabledDate</b></span>
+                        <a href="#disabledDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="movieService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>movieService</b></span>
+                        <a href="#movieService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/MoviesService.html" target="_self" >MoviesService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedYear"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>selectedYear</b></span>
+                        <a href="#selectedYear"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="today"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>today</b></span>
+                        <a href="#today"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Date()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/pages/dashboard/dashboard.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { mergeMap, Observable, of } from &#x27;rxjs&#x27;;
+import { differenceInCalendarDays } from &#x27;date-fns&#x27;;
+import { MoviesService } from &#x27;../../services/movies.service&#x27;;
+import { MovieWinnerByYear } from &#x27;../../interfaces/movie-winner-by-year.interface&#x27;;
+
+@Component({
+  selector: &#x27;app-dashboard&#x27;,
+  templateUrl: &#x27;./dashboard.component.html&#x27;,
+  styleUrls: [&#x27;./dashboard.component.sass&#x27;]
+})
+export class DashboardComponent {
+
+  private today &#x3D; new Date();
+
+  public $yearsWithMostWinners &#x3D; this.movieService.getYearWithMultipleWinners();
+  public $awardsInterval &#x3D; this.movieService.getMaxMinWinIntervalForProducers();
+  public $topThreeStudios &#x3D; this.movieService.getStudiosWithWinCount().pipe(mergeMap(this.getFirstThreeItems));
+
+  public $movieWinnerByYear: Observable&lt;MovieWinnerByYear[]&gt; &#x3D; this.movieService.getMovieWinnerByYear(0);
+
+  public selectedYear!: Date;
+
+  constructor(public movieService: MoviesService) { }
+
+  disabledDate &#x3D; (current: Date): boolean &#x3D;&gt; differenceInCalendarDays(current, this.today) &gt; 0;
+
+  getFirstThreeItems(studios: any) {
+    studios.studios &#x3D; studios.studios.slice(0, 3);
+    return of(studios);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div nz-row [nzGutter]&#x3D;&quot;[8, 8]&quot;&gt;
+  &lt;div nz-col [nzSm]&#x3D;&quot;24&quot; [nzMd]&#x3D;&quot;24&quot; [nzLg]&#x3D;&quot;12&quot;&gt;
+    &lt;nz-card nzTitle&#x3D;&quot;Years with multiple winners&quot;&gt;
+      &lt;nz-table #yearsWithMostWinnersTable [nzShowPagination]&#x3D;&quot;false&quot;
+        *ngIf&#x3D;&quot;$yearsWithMostWinners | async as yearsWithMostWinners&quot; [nzData]&#x3D;&quot;yearsWithMostWinners.years&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+            &lt;th&gt;Win Count&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr *ngFor&#x3D;&quot;let data of yearsWithMostWinnersTable.data&quot;&gt;
+            &lt;td&gt;{{ data.year }}&lt;/td&gt;
+            &lt;td&gt;{{ data.winnerCount}}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/nz-table&gt;
+    &lt;/nz-card&gt;
+  &lt;/div&gt;
+  &lt;div nz-col [nzSm]&#x3D;&quot;24&quot; [nzMd]&#x3D;&quot;24&quot; [nzLg]&#x3D;&quot;12&quot;&gt;
+    &lt;nz-card nzTitle&#x3D;&quot;Top 3 studios with winners&quot;&gt;
+      &lt;nz-table
+        #studiosTable
+        *ngIf&#x3D;&quot;$topThreeStudios | async as studios&quot;
+        [nzShowPagination]&#x3D;&quot;false&quot;
+        [nzData]&#x3D;&quot;studios.studios&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Win Count&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr *ngFor&#x3D;&quot;let data of studiosTable.data&quot;&gt;
+            &lt;td&gt;{{ data.name }}&lt;/td&gt;
+            &lt;td&gt;{{ data.winCount}}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/nz-table&gt;
+    &lt;/nz-card&gt;
+  &lt;/div&gt;
+  &lt;div nz-col [nzSm]&#x3D;&quot;24&quot; [nzMd]&#x3D;&quot;24&quot; [nzLg]&#x3D;&quot;12&quot;&gt;
+    &lt;nz-card nzTitle&#x3D;&quot;Producers with longest and shortest interval between wins&quot;&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;$awardsInterval | async as awardsInterval&quot;&gt;
+        &lt;nz-divider nzText&#x3D;&quot;Maximum&quot;&gt;&lt;/nz-divider&gt;
+        &lt;ng-container *ngTemplateOutlet&#x3D;&quot;awardIntervalTemplate; context: { $implicit: awardsInterval.max}&quot;&gt;
+        &lt;/ng-container&gt;
+        &lt;nz-divider nzText&#x3D;&quot;Minimum&quot;&gt;&lt;/nz-divider&gt;
+        &lt;ng-container *ngTemplateOutlet&#x3D;&quot;awardIntervalTemplate; context: { $implicit: awardsInterval.min}&quot;&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/nz-card&gt;
+  &lt;/div&gt;
+  &lt;div nz-col [nzSm]&#x3D;&quot;24&quot; [nzMd]&#x3D;&quot;24&quot; [nzLg]&#x3D;&quot;12&quot;&gt;
+    &lt;nz-card nzTitle&#x3D;&quot;Movie winners by year&quot;&gt;
+      &lt;div nz-row nzJustify&#x3D;&quot;end&quot;&gt;
+        &lt;nz-date-picker
+          nzMode&#x3D;&quot;year&quot;
+          [(ngModel)]&#x3D;&quot;selectedYear&quot;
+          [nzDisabledDate]&#x3D;&quot;disabledDate&quot;
+          (ngModelChange)&#x3D;&quot;$movieWinnerByYear &#x3D; movieService.getMovieWinnerByYear($event ? $event.getFullYear() : 0)&quot;&gt;
+        &lt;/nz-date-picker&gt;
+      &lt;/div&gt;
+      &lt;nz-table
+        #movieYearWinnerTable
+        *ngIf&#x3D;&quot;$movieWinnerByYear | async as movieWinnerByYear&quot;
+        class&#x3D;&quot;movie-winner-by-year-table&quot;
+        [nzWidthConfig]&#x3D;&quot;[&#x27;25%&#x27;,&#x27;25%&#x27;,&#x27;25%&#x27;]&quot;
+        [nzShowPagination]&#x3D;&quot;false&quot;
+        [nzData]&#x3D;&quot;movieWinnerByYear&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Id&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+            &lt;th&gt;Title&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr *ngFor&#x3D;&quot;let data of movieYearWinnerTable.data&quot;&gt;
+            &lt;td&gt;{{ data.id }}&lt;/td&gt;
+            &lt;td&gt;{{ data.year}}&lt;/td&gt;
+            &lt;td&gt;{{ data.title}}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/nz-table&gt;
+    &lt;/nz-card&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #awardIntervalTemplate let-data&gt;
+  &lt;nz-table [nzWidthConfig]&#x3D;&quot;[&#x27;25%&#x27;,&#x27;25%&#x27;,&#x27;25%&#x27;,&#x27;25%&#x27;]&quot; #awardInterval [nzShowPagination]&#x3D;&quot;false&quot; [nzData]&#x3D;&quot;data&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Producer&lt;/th&gt;
+        &lt;th&gt;Interval&lt;/th&gt;
+        &lt;th&gt;Previous Year&lt;/th&gt;
+        &lt;th&gt;Following Year&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr *ngFor&#x3D;&quot;let data of awardInterval.data&quot;&gt;
+        &lt;td&gt;{{ data.producer }}&lt;/td&gt;
+        &lt;td&gt;{{ data.interval}}&lt;/td&gt;
+        &lt;td&gt;{{ data.previousWin }}&lt;/td&gt;
+        &lt;td&gt;{{ data.followingWin}}&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/nz-table&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./dashboard.component.sass</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.movie-winner-by-year-table
+  margin-top: 10px
+  height: 358.29px
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div nz-row [nzGutter]="[8, 8]">  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">    <nz-card nzTitle="Years with multiple winners">      <nz-table #yearsWithMostWinnersTable [nzShowPagination]="false"        *ngIf="$yearsWithMostWinners | async as yearsWithMostWinners" [nzData]="yearsWithMostWinners.years">        <thead>          <tr>            <th>Year</th>            <th>Win Count</th>          </tr>        </thead>        <tbody>          <tr *ngFor="let data of yearsWithMostWinnersTable.data">            <td>{{ data.year }}</td>            <td>{{ data.winnerCount}}</td>          </tr>        </tbody>      </nz-table>    </nz-card>  </div>  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">    <nz-card nzTitle="Top 3 studios with winners">      <nz-table        #studiosTable        *ngIf="$topThreeStudios | async as studios"        [nzShowPagination]="false"        [nzData]="studios.studios">        <thead>          <tr>            <th>Name</th>            <th>Win Count</th>          </tr>        </thead>        <tbody>          <tr *ngFor="let data of studiosTable.data">            <td>{{ data.name }}</td>            <td>{{ data.winCount}}</td>          </tr>        </tbody>      </nz-table>    </nz-card>  </div>  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">    <nz-card nzTitle="Producers with longest and shortest interval between wins">      <ng-container *ngIf="$awardsInterval | async as awardsInterval">        <nz-divider nzText="Maximum"></nz-divider>        <ng-container *ngTemplateOutlet="awardIntervalTemplate; context: { $implicit: awardsInterval.max}">        </ng-container>        <nz-divider nzText="Minimum"></nz-divider>        <ng-container *ngTemplateOutlet="awardIntervalTemplate; context: { $implicit: awardsInterval.min}">        </ng-container>      </ng-container>    </nz-card>  </div>  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">    <nz-card nzTitle="Movie winners by year">      <div nz-row nzJustify="end">        <nz-date-picker          nzMode="year"          [(ngModel)]="selectedYear"          [nzDisabledDate]="disabledDate"          (ngModelChange)="$movieWinnerByYear = movieService.getMovieWinnerByYear($event ? $event.getFullYear() : 0)">        </nz-date-picker>      </div>      <nz-table        #movieYearWinnerTable        *ngIf="$movieWinnerByYear | async as movieWinnerByYear"        class="movie-winner-by-year-table"        [nzWidthConfig]="[\'25%\',\'25%\',\'25%\']"        [nzShowPagination]="false"        [nzData]="movieWinnerByYear">        <thead>          <tr>            <th>Id</th>            <th>Year</th>            <th>Title</th>          </tr>        </thead>        <tbody>          <tr *ngFor="let data of movieYearWinnerTable.data">            <td>{{ data.id }}</td>            <td>{{ data.year}}</td>            <td>{{ data.title}}</td>          </tr>        </tbody>      </nz-table>    </nz-card>  </div></div><ng-template #awardIntervalTemplate let-data>  <nz-table [nzWidthConfig]="[\'25%\',\'25%\',\'25%\',\'25%\']" #awardInterval [nzShowPagination]="false" [nzData]="data">    <thead>      <tr>        <th>Producer</th>        <th>Interval</th>        <th>Previous Year</th>        <th>Following Year</th>      </tr>    </thead>    <tbody>      <tr *ngFor="let data of awardInterval.data">        <td>{{ data.producer }}</td>        <td>{{ data.interval}}</td>        <td>{{ data.previousWin }}</td>        <td>{{ data.followingWin}}</td>      </tr>    </tbody>  </nz-table></ng-template></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ListComponent', 'selector': 'app-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DashboardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -18,6 +18,12 @@ export class MoviesService {
 
   constructor(private httpClient: HttpClient) { }
 
+  /**
+   * Get a detailed movie data list with pagination.
+   * `page`, `winner`, and `year` query params can be updated or removed
+   * using `updateMovieDataParams` and `removeMovieDataParams`, respectively.
+   * @returns Observable of 'MovieData'
+   */
   public getMovieData(): Observable<MovieData> {
     const queryParams: any = Object.assign({ page: 0, size: 15 }, this.movieDataParams);
     return this.httpClient.get<MovieData>(this.baseUrl, { params: queryParams });
