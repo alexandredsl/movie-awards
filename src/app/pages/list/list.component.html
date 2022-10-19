@@ -28,7 +28,9 @@
                   (ngModelChange)="
                     $event
                       ? movieService.updateMovieDataParams({year: $event.getFullYear()})
-                      : movieService.removeMovieDataParams(['year']); loadData()
+                      : movieService.removeMovieDataParams(['year']);
+                      movieService.updateMovieDataParams({page: 0});
+                    loadData();
                   "
                   nzMode="year"
                   [nzDisabledDate]="disabledDate">
@@ -58,7 +60,10 @@
                   (ngModelChange)="
                     $event !== null
                       ? movieService.updateMovieDataParams({winner: $event})
-                      : movieService.removeMovieDataParams(['winner']); loadData()">
+                      : movieService.removeMovieDataParams(['winner']);
+                      movieService.updateMovieDataParams({page: 0});
+                    loadData();
+                  ">
                 </nz-select>
               </div>
             </div>
