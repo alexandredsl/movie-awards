@@ -1,0 +1,78 @@
+<nz-card nzTitle="List Movies">
+
+  <nz-table
+    #movieDataListTable
+    [nzLoading]="loading"
+    [nzPageIndex]="movieDataList.pageable.pageNumber + 1"
+    [nzFrontPagination]="false"
+    [nzTotal]="movieDataList.totalElements"
+    (nzPageIndexChange)="movieService.updateMovieDataParams({page: $event - 1}); loadData()"
+    [nzPageSize]="15"
+    [nzWidthConfig]="['20%','20%','40%','20%']"
+    [nzData]="movieDataList.content">
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th nzCustomFilter>
+          Year
+          <nz-filter-trigger [nzActive]="!!selectedYear" [nzDropdownMenu]="selectedYearMenu">
+            <span nz-icon nzType="calendar"></span>
+          </nz-filter-trigger>
+          <nz-dropdown-menu #selectedYearMenu="nzDropdownMenu">
+            <div class="ant-table-filter-dropdown">
+              <div class="search-box">
+                <nz-date-picker
+                  [(ngModel)]="selectedYear"
+                  (ngModelChange)="
+                    $event
+                      ? movieService.updateMovieDataParams({year: $event.getFullYear()})
+                      : movieService.removeMovieDataParams(['year']); loadData()
+                  "
+                  nzMode="year"
+                  [nzDisabledDate]="disabledDate">
+                </nz-date-picker>
+              </div>
+            </div>
+          </nz-dropdown-menu>
+        </th>
+        <th>
+          Title
+        </th>
+        <th nzCustomFilter>
+          Winner
+          <nz-filter-trigger
+            [nzActive]="(isWinner !== undefined) && (isWinner !== null)"
+            [nzDropdownMenu]="winnerFilterMenu">
+            <span nz-icon nzType="filter"></span>
+          </nz-filter-trigger>
+          <nz-dropdown-menu #winnerFilterMenu="nzDropdownMenu">
+            <div class="ant-table-filter-dropdown">
+              <div class="search-box">
+                <nz-select
+                  nzPlaceHolder="Yes/No"
+                  [nzAllowClear]="true"
+                  [nzOptions]="[{ label: 'Yes', value: true }, { label: 'No', value: false }]"
+                  [(ngModel)]="isWinner"
+                  (ngModelChange)="
+                    $event !== null
+                      ? movieService.updateMovieDataParams({winner: $event})
+                      : movieService.removeMovieDataParams(['winner']); loadData()">
+                </nz-select>
+              </div>
+            </div>
+          </nz-dropdown-menu>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of movieDataListTable.data">
+        <td>{{ data.id }}</td>
+        <td>{{ data.year }}</td>
+        <td>{{ data.title}}</td>
+        <td>{{ data.winner ? 'Yes' : 'No'}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</nz-card>

@@ -1,0 +1,110 @@
+<div nz-row [nzGutter]="[8, 8]">
+  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">
+    <nz-card nzTitle="Years with multiple winners">
+      <nz-table #yearsWithMostWinnersTable [nzShowPagination]="false"
+        *ngIf="$yearsWithMostWinners | async as yearsWithMostWinners" [nzData]="yearsWithMostWinners.years">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Win Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of yearsWithMostWinnersTable.data">
+            <td>{{ data.year }}</td>
+            <td>{{ data.winnerCount}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">
+    <nz-card nzTitle="Top 3 studios with winners">
+      <nz-table
+        #studiosTable
+        *ngIf="$topThreeStudios | async as studios"
+        [nzShowPagination]="false"
+        [nzData]="studios.studios">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Win Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of studiosTable.data">
+            <td>{{ data.name }}</td>
+            <td>{{ data.winCount}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">
+    <nz-card nzTitle="Producers with longest and shortest interval between wins">
+      <ng-container *ngIf="$awardsInterval | async as awardsInterval">
+        <nz-divider nzText="Maximum"></nz-divider>
+        <ng-container *ngTemplateOutlet="awardIntervalTemplate; context: { $implicit: awardsInterval.max}">
+        </ng-container>
+        <nz-divider nzText="Minimum"></nz-divider>
+        <ng-container *ngTemplateOutlet="awardIntervalTemplate; context: { $implicit: awardsInterval.min}">
+        </ng-container>
+      </ng-container>
+    </nz-card>
+  </div>
+  <div nz-col [nzSm]="24" [nzMd]="24" [nzLg]="12">
+    <nz-card nzTitle="Movie winners by year">
+      <div nz-row nzJustify="end">
+        <nz-date-picker
+          nzMode="year"
+          [(ngModel)]="selectedYear"
+          [nzDisabledDate]="disabledDate"
+          (ngModelChange)="$movieWinnerByYear = movieService.getMovieWinnerByYear($event ? $event.getFullYear() : 0)">
+        </nz-date-picker>
+      </div>
+      <nz-table
+        #movieYearWinnerTable
+        *ngIf="$movieWinnerByYear | async as movieWinnerByYear"
+        class="movie-winner-by-year-table"
+        [nzWidthConfig]="['25%','25%','25%']"
+        [nzShowPagination]="false"
+        [nzData]="movieWinnerByYear">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Year</th>
+            <th>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of movieYearWinnerTable.data">
+            <td>{{ data.id }}</td>
+            <td>{{ data.year}}</td>
+            <td>{{ data.title}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+</div>
+
+<ng-template #awardIntervalTemplate let-data>
+  <nz-table [nzWidthConfig]="['25%','25%','25%','25%']" #awardInterval [nzShowPagination]="false" [nzData]="data">
+    <thead>
+      <tr>
+        <th>Producer</th>
+        <th>Interval</th>
+        <th>Previous Year</th>
+        <th>Following Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of awardInterval.data">
+        <td>{{ data.producer }}</td>
+        <td>{{ data.interval}}</td>
+        <td>{{ data.previousWin }}</td>
+        <td>{{ data.followingWin}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
