@@ -16,4 +16,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Architecture documentation
 
-Open [Compodoc]https://alexandredsl.github.io/movie-awards/ to check.
+Open [Compodoc](https://alexandredsl.github.io/movie-awards/) to check.
